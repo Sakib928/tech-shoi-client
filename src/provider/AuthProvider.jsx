@@ -1,7 +1,9 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const authContext = createContext();
 const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState();
+  const [loading, setLoading] = useState(true);
   const authInfo = {
     name: "sakib hasan",
   };

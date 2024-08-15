@@ -1,7 +1,12 @@
+import Navbar from "./components/Navbar";
+import useAuth from "./hooks/useAuth";
+
 const App = () => {
+  const { name } = useAuth();
+  console.log(name);
   return (
-    <div className="text-4xl font-bold">
-      Hello there amigo welcome to tech-shoi
+    <div>
+      <Navbar />
     </div>
   );
 };
