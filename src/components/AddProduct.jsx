@@ -7,12 +7,12 @@ const AddProduct = () => {
 
   const onsubmit = async (data) => {
     console.log(data);
-    await axios.post("http://localhost:5000/product", data).then((res) => {
-      console.log(res.data);
-      if (res.data.insertedId) {
-        toast.success("added product successfully");
-      }
-    });
+    // await axios.post("http://localhost:5000/product", data).then((res) => {
+    //   console.log(res.data);
+    //   if (res.data.insertedId) {
+    //     toast.success("added product successfully");
+    //   }
+    // });
   };
 
   return (

@@ -1,18 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import useAuth from "../hooks/useAuth";
 
 const Products = () => {
-  const { data: products = [] } = useQuery({
-    queryKey: ["product"],
-    queryFn: async () => {
-      const res = await axios.get("http://localhost:5000/products");
-      return res.data;
-    },
-  });
-  // console.log(products);
+  const { showProducts } = useAuth();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-      {products?.map((product) => {
+      {showProducts?.map((product) => {
         return (
           <div
             key={product._id}

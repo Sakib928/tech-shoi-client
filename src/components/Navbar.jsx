@@ -1,14 +1,16 @@
 import { FaSearch } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import { useRef } from "react";
+import useAuth from "../hooks/useAuth";
 const Navbar = () => {
   const searchRef = useRef();
+  const { setSearchText } = useAuth();
   const handleSearch = () => {
-    console.log(searchRef.current.value);
+    setSearchText(searchRef.current.value);
   };
   const handleEnterSearch = (e) => {
     if (e.key === "Enter") {
-      console.log(searchRef.current.value);
+      setSearchText(searchRef.current.value);
     }
   };
   return (
