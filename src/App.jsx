@@ -1,15 +1,14 @@
 import Brands from "./components/Brands";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
-import useAuth from "./hooks/useAuth";
+import SortingMethods from "./components/SortingMethods";
 
 const App = () => {
-  const { name } = useAuth();
-  console.log(name);
   return (
     <div>
       <Navbar />
       <Brands />
+      <SortingMethods />
       <Products />
     </div>
   );
