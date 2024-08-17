@@ -1,4 +1,5 @@
 import useAuth from "../hooks/useAuth";
+import "animate.css";
 
 const Products = () => {
   const { showProducts } = useAuth();
@@ -8,7 +9,7 @@ const Products = () => {
         return (
           <div
             key={product._id}
-            className="max-w-xs p-6 rounded-md shadow-md bg-gray-50 text-gray-900 mx-auto"
+            className="animate__animated animate__fadeInUp max-w-xs p-6 rounded-md shadow-md bg-gray-50 text-gray-900 mx-auto"
           >
             <img
               src={product.image}

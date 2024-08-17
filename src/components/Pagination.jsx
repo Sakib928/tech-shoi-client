@@ -10,12 +10,12 @@ const Pagination = () => {
     setCurrentPage(currentPage - 1);
   };
   return (
-    <div className="flex justify-center space-x-1 dark:text-gray-800 my-4 font-bold">
+    <div className="flex justify-center space-x-1  my-4 font-bold">
       <button
         onClick={handlePrev}
         title="previous"
         type="button"
-        className="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100"
+        className="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md "
         disabled={currentPage == 1}
       >
         <svg
@@ -37,7 +37,7 @@ const Pagination = () => {
             key={page}
             type="button"
             title="Page 1"
-            className={`inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 dark:text-default-600 dark:border-default-600 ${
+            className={`inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md ${
               currentPage == page + 1 ? "scale-125 text-blue-600" : "scale-100"
             }`}
           >
@@ -50,7 +50,7 @@ const Pagination = () => {
         onClick={handleNext}
         title="next"
         type="button"
-        className="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100"
+        className="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md"
         disabled={currentPage == pages[pages.length - 1] + 1}
       >
         <svg

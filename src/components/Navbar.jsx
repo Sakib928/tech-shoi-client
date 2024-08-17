@@ -49,7 +49,7 @@ const Navbar = () => {
         <button
           onClick={handleUser}
           type="button"
-          className="px-6 mr-4 font-semibold rounded dark:bg-gray-800 dark:text-gray-100"
+          className="px-6 mr-4 border-2 border-gray-800 font-semibold rounded  "
         >
           {user ? "Logout" : "Login"}
         </button>
