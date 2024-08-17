@@ -1,3 +1,4 @@
+// import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
@@ -8,18 +9,18 @@ const AuthProvider = ({ children }) => {
   const [showProducts, setShowProducts] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [brand, setBrand] = useState("");
-  const [catagory, setCatagory] = useState("");
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     axios
       .get(
-        `http://localhost:5000/products/?searchText=${searchText}&brand=${brand}&catagory=${catagory}`
+        `http://localhost:5000/products/?searchText=${searchText}&brand=${brand}&category=${category}`
       )
       .then((res) => {
-        console.log(res?.data);
+        // console.log(res?.data);
         setShowProducts(res?.data);
       });
-  }, [searchText, brand, catagory]);
+  }, [searchText, brand, category]);
 
   const authInfo = {
     showProducts,
@@ -30,7 +31,7 @@ const AuthProvider = ({ children }) => {
     setLoading,
     setSearchText,
     setBrand,
-    setCatagory,
+    setCategory,
   };
   return (
     <authContext.Provider value={authInfo}>{children}</authContext.Provider>
