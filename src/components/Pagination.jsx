@@ -2,7 +2,7 @@ import useAuth from "../hooks/useAuth";
 
 const Pagination = () => {
   const { pages, currentPage, setCurrentPage } = useAuth();
-  console.log(pages[pages.length - 1] + 1);
+  // console.log(pages[pages.length - 1] + 1);
   const handleNext = () => {
     setCurrentPage(currentPage + 1);
   };
