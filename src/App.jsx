@@ -1,4 +1,5 @@
 import Brands from "./components/Brands";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Pagination from "./components/Pagination";
 import Products from "./components/Products";
@@ -12,6 +13,7 @@ const App = () => {
       <SortingMethods />
       <Products />
       <Pagination />
+      <Footer />
     </div>
   );
 };

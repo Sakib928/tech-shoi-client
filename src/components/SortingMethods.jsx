@@ -32,7 +32,7 @@ const SortingMethods = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/price-range?range=${range}`)
+      .get(`https://tech-shoi-server.vercel.app/price-range?range=${range}`)
       .then((res) => setShowProducts(res.data));
   }, [range]);
 

@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:5000/products/?searchText=${searchText}&brand=${brand}&category=${category}&page=${currentPage}`
+        `https://tech-shoi-server.vercel.app/products/?searchText=${searchText}&brand=${brand}&category=${category}&page=${currentPage}`
       )
       .then((res) => {
         // console.log(res?.data);
@@ -54,7 +54,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/productsCount")
+      .get("https://tech-shoi-server.vercel.app/productsCount")
 
       .then((res) => {
         setCount(res.data.count);

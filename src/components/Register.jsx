@@ -114,7 +114,7 @@ const Register = () => {
                 to="/login"
                 className="text-sm text-blue-500 hover:underline "
               >
-                Already have and account? Sign in
+                Already have an account? Sign in
               </Link>
             </div>
           </div>
