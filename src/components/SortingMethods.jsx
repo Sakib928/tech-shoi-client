@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import axios from "axios";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const SortingMethods = () => {
   const { showProducts, setShowProducts } = useAuth();
@@ -50,9 +51,13 @@ const SortingMethods = () => {
         <option value="3000">2000-3000</option>
       </select>
 
-      <div className="dropdown dropdown-bottom">
-        <div tabIndex={0} role="button" className="btn m-1 border-2">
-          Sort by
+      <div className="dropdown dropdown-bottom bg-white rounded-md border-2">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn m-1 bg-white border-none font-normal text-md"
+        >
+          Sort by <IoIosArrowDropdown />
         </div>
         <ul
           tabIndex={0}
