@@ -8,21 +8,21 @@ const SortingMethods = () => {
 
   const handlePriceRange = (e) => {
     setRange(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
 
   const sortbydate = () => {
     const newArray = [...showProducts]?.sort((a, b) => {
       return new Date(b.date) - new Date(a.date);
     });
-    console.log(newArray);
+    // console.log(newArray);
     setShowProducts(newArray);
   };
 
   const sortbyprice = (type) => {
     if (type == 1) {
       const newArray = [...showProducts]?.sort((a, b) => a.price - b.price);
-      console.log(newArray);
+      // console.log(newArray);
       setShowProducts(newArray);
     } else {
       const newArray = [...showProducts]?.sort((a, b) => b.price - a.price);
